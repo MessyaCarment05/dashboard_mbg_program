@@ -102,8 +102,7 @@ def home_page():
         if st.button("Switch to Topic Analysis"):
             st.session_state.view = "topic"
             st.rerun()
-    def get_sentiment_data(index_list):
-        return df_sentiment.loc[index_list, ""]
+  
     def topic_part():
         st.subheader("Popular Topic Analysis on MBG Program in Indonesia")
         topic_options = df_topics["topic_name"].unique().tolist()
