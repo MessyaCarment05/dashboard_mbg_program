@@ -1,0 +1,11 @@
+,topic_id,sentiment_value,topic_name,sentiment,docs_list
+0,8,-1,"pemerintah, luncurkan, kantin, penurunan, muntah",Negative,"[2, 136, 167, 202, 287, 288, 457, 614, 726, 787, 864, 1043, 1720, 1761, 1858, 1883, 1887, 1972]"
+1,6,-8,"disumbang, charity, gratisan, penipuan, pendukung",Negative,"[17, 37, 491, 637, 969, 1024, 1058, 1145, 1293, 1302, 1374, 1451, 1452, 1616, 1617, 1787, 1818, 1898, 1978]"
+2,9,15,"pedalaman, nyata, manfaat, penuhigiziindonesia, masyarakat",Positive,"[26, 227, 921, 928, 931, 934, 1034, 1061, 1098, 1105, 1113, 1131, 1134, 1251, 1262, 1264, 1329]"
+3,5,-5,"keracunan, sukoharjo, kalimat, bareng, ketapang",Negative,"[43, 180, 419, 590, 711, 938, 1038, 1165, 1479, 1536, 1560, 1578, 1607, 1682, 1737, 1755, 1760, 1870, 1947]"
+4,3,3,"subianto, menargetkan, presiden, indonesia, memimpin",Positive,"[60, 188, 297, 302, 303, 339, 348, 393, 396, 443, 453, 553, 789, 863, 926, 935, 1248, 1339, 1366, 1398]"
+5,2,9,"patut, apresiasi, top, hemat, keren",Positive,"[63, 97, 220, 225, 231, 234, 242, 243, 247, 260, 441, 501, 859, 892, 1186, 1285, 1368, 1561, 1822, 1957]"
+6,4,-8,"bocil, harapan, depannya, pura, bodoh",Negative,"[64, 74, 98, 190, 248, 252, 328, 532, 595, 682, 813, 873, 998, 1124, 1178, 1341, 1526, 1652, 1948]"
+7,1,-12,"pemerintah, khan, membandingkan, dng, memperketat",Negative,"[105, 118, 197, 603, 645, 652, 663, 674, 685, 785, 936, 1003, 1053, 1223, 1260, 1265, 1345, 1422, 1604, 1696, 1772]"
+8,0,-12,"stunting, balita, sma, smp, gizi",Negative,"[170, 212, 307, 324, 358, 415, 466, 473, 509, 550, 625, 660, 665, 667, 703, 791, 896, 909, 1052, 1066, 1163, 1170, 1171, 1173, 1174, 1309, 1371, 1372, 1402, 1515, 1517, 1658, 1691, 1703]"
+9,7,1,"peternakan, produk, kunak, muzani, kementan",Positive,"[274, 289, 469, 480, 489, 552, 582, 624, 642, 675, 716, 761, 772, 777, 941, 1011, 1272, 1857]"
