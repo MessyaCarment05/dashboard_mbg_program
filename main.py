@@ -179,14 +179,15 @@ def home_page():
 
         bar_topic_result=bar_df_topics.merge(df_sentiment, left_on="docs_list", right_index=True)
 
-        bar_final_df_topic = bar_topic_result.groupby(['topic_id','topic_name'])['sentiment'].agg(
-            neutral_count=lambda x: (x == "Neutral").sum(),
-            positive_count=lambda x: (x=="Positive").sum(),
-            negative_count=lambda x: (x=="Negative").sum(),
+        bar_final_df_topic = bar_topic_result.groupby(['topic_id','topic_name']).agg(
+            neutral_count=('sentiment', lambda x: (x == "Neutral").sum()),
+            positive_count=('sentiment', lambda x: (x=="Positive").sum()),
+            negative_count=('sentiment', lambda x: (x=="Negative").sum()),
+            sentiment_value=('sentiment_value', 'first')
         ).reset_index()
 
-        bar_final_df_topic=bar_final_df_topic[['topic_id', 'topic_name', 'negative_count', 'neutral_count', 'positive_count']]
-
+        bar_final_df_topic=bar_final_df_topic[['topic_id', 'topic_name', 'negative_count', 'neutral_count', 'positive_count', 'sentiment_value']]
+      
         # sentiment value masuk filter
         sentiment_topic_value_df=filtered_topic_result[['topic_id', 'sentiment_value']].drop_duplicates(subset='topic_id')
 
@@ -229,6 +230,17 @@ def home_page():
             textposition='inside',
             insidetextanchor='start'
         ))
+        
+        for i, row in bar_final_df_topic.iterrows():
+            total_count=row['negative_count']+row['positive_count']+row['neutral_count']
+            fig.add_trace(go.Scatter(
+                x=[total_count+0.5],
+                y=[row['topic_name']],
+                mode='text',
+                text=[f"{row['sentiment_value']}"],
+                textposition='middle right',
+                showlegend=False,
+            ))
         fig.update_layout(
             barmode='stack',
             xaxis_title='Total Tweet',
