@@ -11,8 +11,8 @@ import plotly.graph_objects as go
 st.set_page_config(page_title="MBG Program Dashboard", page_icon="", layout="wide")
 
 # Load data
-df_sentiment=pd.read_csv("data/MBG_withSentiment.csv")
-df_topics=pd.read_csv("data/MBG_topics.csv")
+df_sentiment=pd.read_csv("dashboard_mbg_program/data/MBG_withSentiment.csv")
+df_topics=pd.read_csv("dashboard_mbg_program/data/MBG_topics.csv")
 
 
 df_sentiment=df_sentiment.drop(["Unnamed: 0.1", "Unnamed: 0"], axis=1)
