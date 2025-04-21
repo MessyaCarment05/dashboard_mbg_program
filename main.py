@@ -174,7 +174,7 @@ def home_page():
 
         s11,s22,s33,s44,s55,s66,s77=st.columns(7) # ini buat atur posisi 
         s11.metric(label="sentiment_value", value=final_df_topic['sentiment_value'].sum())
-        style_metric_cards(background_color="#071021", border_left_color="#1f66bd")
+        style_metric_cards(background_color="", border_left_color="#1f66bd")
 
         # code untuk df_topic barchart
         bar_df_topics=df_topics
