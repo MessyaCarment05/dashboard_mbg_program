@@ -51,7 +51,7 @@ def home_page():
        
         t11, t22, t33,t44, t55,t66,t77=st.columns(7)  # ini supaya bisa ditengah
         t11.metric(label="Tweets", value=len(filtered_df_sentiment))
-        style_metric_cards(background_color="#071021", border_left_color="#1f66bd")
+        style_metric_cards(background_color="", border_left_color="#1f66bd")
 
         b1, b2=st.columns(2)
         sentiment_source=filtered_df_sentiment
@@ -64,7 +64,14 @@ def home_page():
             bar_chart = alt.Chart(sentiment_count).mark_bar().encode(
                 x=alt.X("Day:N", title="Day of the Week",sort=["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]),
                 y=alt.Y("TweetCount:Q", title="Total Tweets per Day"),
-                color=alt.Color("sentiment:N", title="Sentiment"), 
+                 color=alt.Color(
+                    "sentiment:N", 
+                    title="Sentiment",
+                    scale=alt.Scale(
+                        domain=["Positive", "Negative", "Neutral"],
+                        range=["lightgreen", "red", "gold"]  
+                    )
+                ),
                 tooltip=["Day", "sentiment", "TweetCount"]  
             ).properties(width=600, height=400)
             st.altair_chart(bar_chart)
