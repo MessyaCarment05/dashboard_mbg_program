@@ -1,0 +1,6 @@
+streamlit
+pandas
+streamlit-extras
+altair
+plotly
+matplotlib
